@@ -23,7 +23,7 @@
   
 
   
-<link rel="stylesheet" href="/allegory1024/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
 
   
@@ -172,7 +172,7 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title"></h1>
     <div class="head-info">
@@ -185,7 +185,7 @@
     <section class="main">
       <section class="content">
         
-        <h1 id="AMM算法（Adleman-Mander-Miller-Method）"><a href="#AMM算法（Adleman-Mander-Miller-Method）" class="headerlink" title="AMM算法（Adleman-Mander-Miller Method）"></a>AMM算法（Adleman-Mander-Miller Method）</h1><p>参考资料[Adleman-Mander-Miller Method.pdf](<a href="https://github.com/allegory1024/documents/blob/main/Adleman-Mander-Miller">https://github.com/allegory1024/documents/blob/main/Adleman-Mander-Miller</a> Method.pdf)</p>
+        <h1 id="AMM算法（Adleman-Mander-Miller-Method）"><a href="#AMM算法（Adleman-Mander-Miller-Method）" class="headerlink" title="AMM算法（Adleman-Mander-Miller Method）"></a>AMM算法（Adleman-Mander-Miller Method）</h1><p>参考资料[Adleman-Mander-Miller Method.pdf](<a target="_blank" rel="noopener" href="https://github.com/allegory1024/documents/blob/main/Adleman-Mander-Miller">https://github.com/allegory1024/documents/blob/main/Adleman-Mander-Miller</a> Method.pdf)</p>
 <p>先开个平方<br>$$<br>\begin{aligned}<br>&amp;———————————-\<br>&amp; 设 p-1&#x3D;2^t \cdot s,其中s为奇数\<br>&amp; 取二次剩余x, 有x^{\frac{p-1}{2}} \equiv 1 (mod \ p)\<br>&amp; 即x^{2^{t-1} \cdot s} \equiv 1 (mod \ p)\<br>&amp; 取二次非剩余y，有y^{2^{t-1} \cdot s} \equiv -1 (mod \ p)\<br>&amp; 对t&#x3D;1， 有 x^s \equiv 1 (mod \ p)\<br>&amp; 则x^{\frac{s+1}{2}} \equiv x^{\frac{1}{2}} (mod \ p)\<br>&amp; 对t \geq 2\<br>&amp; (x^s)^{2^{t-1}} \equiv 1 (mod \ p)\<br>&amp; 对上式开根，可能得到\<br>&amp; (x^s)^{2^{t-2}} \equiv1(mod \ p)\ or\ (x^s)^{2^{t-2}}\equiv-1(mod \ p)\<br>&amp; 若为-1，只需乘上y^{2^{t-1} \cdot s }\<br>&amp; 即(x^s)^{2^{t-2}} \cdot y^{2^{t-1} \cdot s \cdot k} \equiv 1 (mod \ p)，其中k&#x3D;0 \ or \ 1\<br>&amp; 故x^s \cdot (y^s)^{2k_1+2^2k_2+…+2^{t-1}k_{t-1}} \equiv 1 (mod \ p)\<br>&amp; 即x^{\frac{s+1}{2}} \cdot (y^s)^{2k_1+2^2k_2+…+2^{t-1}k_{t-1}} \equiv x^{\frac{1}{2}} (mod \ p)\<br>&amp;———————————-\<br>\end{aligned}<br>$$<br>贴个代码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line">def exp(base, power):</span><br><span class="line">    left = 0</span><br><span class="line">    right = power // base</span><br><span class="line">    mid = (left + right) // 2</span><br><span class="line">    while left + 1 &lt; right :</span><br><span class="line">        if power % pow(base, mid) == 0:</span><br><span class="line">            left = mid</span><br><span class="line">        else:</span><br><span class="line">            right = mid</span><br><span class="line">        mid = (left + right) // 2</span><br><span class="line">    return mid</span><br><span class="line"></span><br><span class="line">def AMM2(x,p):</span><br><span class="line">    # 万一是二次非剩余</span><br><span class="line">    if pow(x, (p - 1) // 2, p) != 1:</span><br><span class="line">        return -1</span><br><span class="line">    # 生成二次非剩余</span><br><span class="line">    y = random.randint(1, p)</span><br><span class="line">    while pow(y, (p - 1) // 2, p) == 1:</span><br><span class="line">        y = random.randint(1, p)</span><br><span class="line">    # 求t,s</span><br><span class="line">    t = exp(2, p - 1)</span><br><span class="line">    s = (p - 1) // pow(2, t)</span><br><span class="line">    a = pow(y, s, p)</span><br><span class="line">    b = pow(x, s, p)</span><br><span class="line">    h = 1</span><br><span class="line">    for i in range(1, t):</span><br><span class="line">        tmp = pow(2, t - 1 - i, p)</span><br><span class="line">        d = pow(b, tmp, p)</span><br><span class="line">        if d == 1:</span><br><span class="line">            k = 0</span><br><span class="line">        else :</span><br><span class="line">            k = 1</span><br><span class="line">        b = b * pow(a * a, k, p)</span><br><span class="line">        h = h * pow(a, k, p)</span><br><span class="line">        a = a * a</span><br><span class="line">    return pow(x, (s + 1) // 2, p) * h % p</span><br></pre></td></tr></table></figure>
 
@@ -199,7 +199,7 @@
           <ul class="copyright">
   
     <li><strong>本文作者：</strong>呆瓜的小窝</li>
-    <li><strong>本文链接：</strong><a href="https://github.com/allegory1024/2023/11/30/AMM%E7%AE%97%E6%B3%95%EF%BC%88Adleman-Mander-Miller%20Method%EF%BC%89/index.html" title="https:&#x2F;&#x2F;github.com&#x2F;allegory1024&#x2F;2023&#x2F;11&#x2F;30&#x2F;AMM%E7%AE%97%E6%B3%95%EF%BC%88Adleman-Mander-Miller%20Method%EF%BC%89&#x2F;index.html">https:&#x2F;&#x2F;github.com&#x2F;allegory1024&#x2F;2023&#x2F;11&#x2F;30&#x2F;AMM%E7%AE%97%E6%B3%95%EF%BC%88Adleman-Mander-Miller%20Method%EF%BC%89&#x2F;index.html</a></li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2023/11/30/AMM%E7%AE%97%E6%B3%95%EF%BC%88Adleman-Mander-Miller%20Method%EF%BC%89/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;30&#x2F;AMM%E7%AE%97%E6%B3%95%EF%BC%88Adleman-Mander-Miller%20Method%EF%BC%89&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;30&#x2F;AMM%E7%AE%97%E6%B3%95%EF%BC%88Adleman-Mander-Miller%20Method%EF%BC%89&#x2F;index.html</a></li>
     <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
   
 </ul>
@@ -218,8 +218,8 @@
         
         
   <nav class="nav">
-    <a href="/allegory1024/2023/11/30/Message-Digest%20Algorithm%20MD5(MD5)/"><i class="iconfont iconleft"></i></a>
-    <a href="/allegory1024/2023/10/28/%E5%8F%AF%E7%88%B1%E7%9A%84%E6%86%A8%E6%86%A8%E7%86%8A/">可爱的憨憨熊<i class="iconfont iconright"></i></a>
+    <a href="/2023/11/30/Message-Digest%20Algorithm%20MD5(MD5)/"><i class="iconfont iconleft"></i></a>
+    <a href="/2023/10/28/%E5%8F%AF%E7%88%B1%E7%9A%84%E6%86%A8%E6%86%A8%E7%86%8A/">可爱的憨憨熊<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -297,7 +297,7 @@
   
   
     
-<script src="/allegory1024/js/color-mode.js"></script>
+<script src="/js/color-mode.js"></script>
 
   
   
@@ -329,8 +329,8 @@
 
 
 
-<script src="/allegory1024/js/utils.js"></script>
-<script src="/allegory1024/js/script.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
 
 
 

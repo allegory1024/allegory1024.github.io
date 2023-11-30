@@ -23,7 +23,7 @@
   
 
   
-<link rel="stylesheet" href="/allegory1024/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
 
   
@@ -172,13 +172,13 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title"></h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1372</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1401</span>
     </div>
   </div>
 </section>
@@ -188,7 +188,7 @@
         <h1 id="Message-Digest-Algorithm-MD5-MD5"><a href="#Message-Digest-Algorithm-MD5-MD5" class="headerlink" title="Message-Digest Algorithm MD5(MD5)"></a>Message-Digest Algorithm MD5(MD5)</h1><h2 id="加密方法"><a href="#加密方法" class="headerlink" title="加密方法"></a>加密方法</h2><h3 id="补位与拓展"><a href="#补位与拓展" class="headerlink" title="补位与拓展"></a>补位与拓展</h3><p>将数据按位补充至 bits_length $$\equiv$$ 448 (mod 512)</p>
 <p>补位方法为在信息后补一个 1 和 i 个 0 （$$0\leqslant i \leqslant 511$$）</p>
 <p>其后接上bits_length mod $2^{64}$ 得到的二进制数</p>
-<p><img   class="lazyload" data-original="E:\图片\blog的图\md5的原理.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="md5的原理"></p>
+<p><img    class="lazyload" data-original="E:\图片\blog的图\md5的原理.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">md5的原理</span></p>
 <h3 id="初始化MD缓存器"><a href="#初始化MD缓存器" class="headerlink" title="初始化MD缓存器"></a>初始化MD缓存器</h3><p>MD5运算要用到一个128位的MD5缓存器，用来保存中间变量和最终结果。该缓存器又可看成是4个32位的寄存器A、B、C、D，初始化为 :（小端序）</p>
 <p>A ： 01 23 45 67   (0x67452301)<br>B： 89 AB CD EF  (0xEFCDAB89)<br>C： FE DC BA 98  (0x98BADCFE)<br>D： 76 54 32 10  （0x10325487)</p>
 <h3 id="处理数据段"><a href="#处理数据段" class="headerlink" title="处理数据段"></a>处理数据段</h3><p>四个函数</p>
@@ -200,7 +200,7 @@
 <p>一轮中，a,b,c,d的使用顺序轮转;</p>
 <p>消息分以512位为一分组进行处理，对每个512位分组，进行</p>
 <p>每一个分组进行上述4轮共64次计算后，将A，B，C，D分别加上计算得到的a，b，c，d。当做新的A，B，C，D，并将这4个变量赋值给a,b,c,d再进行下一分组的运算。由于填充后的消息长度为(N+1)*512，则共需计算N+1个分组。计算所有数据分组后，这4个变量为最后的结果，即MD5值。</p>
-<p><img   class="lazyload" data-original="C:\Users\alleg\AppData\Roaming\Typora\typora-user-images\image-20231106001202289.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20231106001202289"></p>
+<p><img    class="lazyload" data-original="C:\Users\alleg\AppData\Roaming\Typora\typora-user-images\image-20231106001202289.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20231106001202289</span></p>
 <h2 id="Python使用"><a href="#Python使用" class="headerlink" title="Python使用"></a>Python使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 不要忘记库啊</span><br><span class="line">import hashlib</span><br><span class="line"></span><br><span class="line"># 写法1()</span><br><span class="line">cipher_md5 = hashlib.md5(plaintext).hexdigest()</span><br><span class="line"></span><br><span class="line">#写法2()</span><br><span class="line">cipher_md5 = hashlib.md5(plaintext.encode(&#x27;utf-8&#x27;))</span><br><span class="line"></span><br><span class="line">#</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -210,7 +210,7 @@
           <ul class="copyright">
   
     <li><strong>本文作者：</strong>呆瓜的小窝</li>
-    <li><strong>本文链接：</strong><a href="https://github.com/allegory1024/2023/11/30/Message-Digest%20Algorithm%20MD5(MD5)/index.html" title="https:&#x2F;&#x2F;github.com&#x2F;allegory1024&#x2F;2023&#x2F;11&#x2F;30&#x2F;Message-Digest%20Algorithm%20MD5(MD5)&#x2F;index.html">https:&#x2F;&#x2F;github.com&#x2F;allegory1024&#x2F;2023&#x2F;11&#x2F;30&#x2F;Message-Digest%20Algorithm%20MD5(MD5)&#x2F;index.html</a></li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2023/11/30/Message-Digest%20Algorithm%20MD5(MD5)/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;30&#x2F;Message-Digest%20Algorithm%20MD5(MD5)&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;30&#x2F;Message-Digest%20Algorithm%20MD5(MD5)&#x2F;index.html</a></li>
     <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
   
 </ul>
@@ -229,8 +229,8 @@
         
         
   <nav class="nav">
-    <a href="/allegory1024/2023/11/30/OTP%EF%BC%88one%20time%20pad%EF%BC%89/"><i class="iconfont iconleft"></i></a>
-    <a href="/allegory1024/2023/11/30/AMM%E7%AE%97%E6%B3%95%EF%BC%88Adleman-Mander-Miller%20Method%EF%BC%89/"><i class="iconfont iconright"></i></a>
+    <a href="/2023/11/30/OTP%EF%BC%88one%20time%20pad%EF%BC%89/"><i class="iconfont iconleft"></i></a>
+    <a href="/2023/11/30/AMM%E7%AE%97%E6%B3%95%EF%BC%88Adleman-Mander-Miller%20Method%EF%BC%89/"><i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -308,7 +308,7 @@
   
   
     
-<script src="/allegory1024/js/color-mode.js"></script>
+<script src="/js/color-mode.js"></script>
 
   
   
@@ -340,8 +340,8 @@
 
 
 
-<script src="/allegory1024/js/utils.js"></script>
-<script src="/allegory1024/js/script.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
 
 
 

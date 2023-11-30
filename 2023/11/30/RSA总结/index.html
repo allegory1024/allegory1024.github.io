@@ -23,7 +23,7 @@
   
 
   
-<link rel="stylesheet" href="/allegory1024/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
 
   
@@ -172,13 +172,13 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title"></h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5868</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5876</span>
     </div>
   </div>
 </section>
@@ -236,7 +236,7 @@
 
 <h3 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h3><h4 id="Aurora第一批ez-RSA"><a href="#Aurora第一批ez-RSA" class="headerlink" title="Aurora第一批ez_RSA"></a>Aurora第一批ez_RSA</h4><h2 id="e-，-phi-n-不互素"><a href="#e-，-phi-n-不互素" class="headerlink" title="$e ，\phi(n)$ 不互素"></a>$e ，\phi(n)$ 不互素</h2><h3 id="前置知识-2"><a href="#前置知识-2" class="headerlink" title="前置知识"></a>前置知识</h3><p>$$<br>(e,\phi(n))&#x3D;b\<br>ed\equiv1(mod\ \phi(n))\<br>e &#x3D;a*b\<br>abd\equiv1(mod\ n)\<br>m^{ab}\equiv c(mod\ n)\<br>c^{bd}\equiv m^{abbd}\equiv m^b(mod\ n)<br>$$</p>
 <h4 id="AMM算法-Adleman-Mander-Miller-Method"><a href="#AMM算法-Adleman-Mander-Miller-Method" class="headerlink" title="AMM算法(Adleman-Mander-Miller Method)"></a>AMM算法(Adleman-Mander-Miller Method)</h4><p>先试试开个平方</p>
-<p><img   class="lazyload" data-original="https://github.com/allegory1024/picture/blob/main/PicGo/amm2.png?raw=true" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="amm2.png"></p>
+<p><img    class="lazyload" data-original="https://github.com/allegory1024/picture/blob/main/PicGo/amm2.png?raw=true" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">amm2.png</span></p>
 <p>开e次方<br>$$<br>\begin{aligned}<br>&amp;———————————-\<br>&amp; 设p-1 &#x3D; e^t \cdot s ,\ (e,s)&#x3D;1\<br>&amp; x^{p-1} \equiv 1 (mod \ p)\<br>&amp; x^{\frac{p-1}{e}} \equiv (x^s)^{e^{t-1}} \equiv 1 (mod \ p)\<br>&amp; 取e次非剩余y\<br>&amp;<br>&amp;———————————-\<br>\end{aligned}<br>$$</p>
 <h3 id="栗子-1"><a href="#栗子-1" class="headerlink" title="栗子"></a>栗子</h3><p>密码小分队的作业</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">from Crypto.Util.number import *</span><br><span class="line"></span><br><span class="line">pbits = 1024</span><br><span class="line">ebits = 128</span><br><span class="line"># 获取公钥私钥</span><br><span class="line">p, q, r = getPrime(pbits), getPrime(pbits), getPrime(pbits)</span><br><span class="line">n = p * q * r</span><br><span class="line">phi = (p - 1) * (q - 1) * (r - 1)</span><br><span class="line"># 如果e和phi公因数不为1，两个不同的素数一定是互质的，则无法找到唯一逆元</span><br><span class="line">e = getPrime(ebits)</span><br><span class="line">d = pow(e, -1, phi)</span><br><span class="line">flag = b&#x27;Aurora&#123;qsdzyyds!!!&#125;&#x27;</span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line">c = pow(m, d, n)</span><br><span class="line"># print(f&#x27;&#123;p = &#125;&#x27;)</span><br><span class="line"># print(f&#x27;&#123;q = &#125;&#x27;)</span><br><span class="line"># print(f&#x27;&#123;r = &#125;&#x27;)</span><br><span class="line"># print(f&#x27;&#123;d = &#125;&#x27;)</span><br><span class="line"># print(f&#x27;&#123;c = &#125;&#x27;)</span><br><span class="line">print(long_to_bytes(pow(c,pow(d, -1, phi),n)))</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">p = 155089215082383417652856262584825266769844756013871145064642937320730176461369677947774705531924142320352641766093453143562687575138818417738819604093981678299529027557569762824528828748472250626411839417820057118716943747683404013206370557881906039159150709858341953260672152732558316331441483274168275526763</span><br><span class="line">q = 99458159859877169574392378452249833796343074299671242013258501391951415572326421921125732543263502498019640404428106003927141825985376810745595606519534271043611911782075965349042977647821232488477974968782597988995148048902654974116209592728965276932843569985976174955101074083969554868848136386600165131399</span><br><span class="line">r = 91651471335922262142615993547035259895259797024298058555829016838710942417583768607279579223908044409598131794717406404663525096096610732076240669046587825828796405228185885554306464905874267359379731836643138481601437402253901432135193895552723924193613958936079182452505527886367093293966408356381210041311</span><br><span class="line">d = 442747012084043017444414893855018573793007661299372367097352382861792889003602588037728446048819227852347893455828101883133569746844701508783893053956719012289315802055706687685268566602913894431266569489633919277840858446396830286325818862414512097339818098582097988809312723217193543811573996727087954016113260795330490313576968882831177308569221641767055133538915346211333222872186027160030751252476351569185442309265927774292590035874810607745405236427975734657453441806659237651837182838166722778499160929718777849220958385266787977425402947577375192915585734121652739018101587357779231658081932365867325954099600878736894914096944082191070889441697102479890187201554680761365082160343103723934238760458984405496635555071883360805786761064163559741197503766279735122871530846116786856021309782369428260249835730750360928321255676555673974197279614465240682986814978863040867333430603922278184967730972325093345114626649</span><br><span class="line">c = 174950850414504768106416370009737478837612719782408699139702945259719132918865623986282406871391754822658312627849153101394650106741466512428305274042442230657560126993498554960871658723798456509112529035489798478717096706824810392887620627166072594171036292041607036870876819845059859389247504696749104531887595606899730673710605613911576279657349022114910542303747378708097267227120657975550730445501508842414205624767004476077426584685157176799924167949548983378108649843293948293752244813986306183608669183543743214078086427602060552332312956921158009130219283635667378181318747574297372072253054237328401708413742670841381811230253410688921051951564003689322740175861896382731212608065561416656719473296246199457252588049621311486643357352094810798248816579979801028113818544090172341567107332996945485085375173472083233916471499352627461296584233551739860555101737013140023475194148420484355802973497741335778064703041</span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
@@ -251,7 +251,7 @@
           <ul class="copyright">
   
     <li><strong>本文作者：</strong>呆瓜的小窝</li>
-    <li><strong>本文链接：</strong><a href="https://github.com/allegory1024/2023/11/30/RSA%E6%80%BB%E7%BB%93/index.html" title="https:&#x2F;&#x2F;github.com&#x2F;allegory1024&#x2F;2023&#x2F;11&#x2F;30&#x2F;RSA%E6%80%BB%E7%BB%93&#x2F;index.html">https:&#x2F;&#x2F;github.com&#x2F;allegory1024&#x2F;2023&#x2F;11&#x2F;30&#x2F;RSA%E6%80%BB%E7%BB%93&#x2F;index.html</a></li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2023/11/30/RSA%E6%80%BB%E7%BB%93/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;30&#x2F;RSA%E6%80%BB%E7%BB%93&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;11&#x2F;30&#x2F;RSA%E6%80%BB%E7%BB%93&#x2F;index.html</a></li>
     <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
   
 </ul>
@@ -270,8 +270,8 @@
         
         
   <nav class="nav">
-    <a href="/allegory1024/2023/11/30/Secure%20Hash%20Algorithm%EF%BC%88SHA%EF%BC%89/"><i class="iconfont iconleft"></i></a>
-    <a href="/allegory1024/2023/11/30/OTP%EF%BC%88one%20time%20pad%EF%BC%89/"><i class="iconfont iconright"></i></a>
+    <a href="/2023/11/30/%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81/"><i class="iconfont iconleft"></i></a>
+    <a href="/2023/11/30/Secure%20Hash%20Algorithm%EF%BC%88SHA%EF%BC%89/"><i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -349,7 +349,7 @@
   
   
     
-<script src="/allegory1024/js/color-mode.js"></script>
+<script src="/js/color-mode.js"></script>
 
   
   
@@ -381,8 +381,8 @@
 
 
 
-<script src="/allegory1024/js/utils.js"></script>
-<script src="/allegory1024/js/script.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
 
 
 
