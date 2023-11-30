@@ -1,287 +1,591 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en" color-mode=light>
 <head>
-  <meta charset="utf-8">
-  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>呆瓜的小窝</title>
-
-  <!-- keywords -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  
+  <meta name="author" content="呆瓜的小窝">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
   
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="呆瓜的小窝">
-<meta property="og:url" content="https://github.com/allegory1024/index.html">
-<meta property="og:site_name" content="呆瓜的小窝">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="呆瓜的小窝">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternative" href="/atom.xml" title="呆瓜的小窝" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/img/favicon.ico">
-  
   
 <link rel="stylesheet" href="/allegory1024/css/style.css">
 
+
   
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
   
 
   
-<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 
   
-<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-
 
   
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: true,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
 <meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-  <div id="container">
-    <div id="particles-js"></div>
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-				<img lazy-src="" class="js-avatar">
-			
-		</a>
 
-		<hgroup>
-			<h1 class="header-author"><a href="/">呆瓜的小窝</a></h1>
-		</hgroup>
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
 
-		
 
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/allegory1024/">Home</a></li>
-				        
-							<li><a href="/allegory1024/archives">Archives</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="half-header-menu">
-						<a class="hide">Home</a>
-						<a>Tags</a>
-						<a>Links</a>
-						<a>About</a>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="mail" target="_blank" href="/allegory1024/dgyy_86549@qq.com" title="mail">mail</a>
-					        
-						</div>
-						<!-- music -->
-						
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
-			        
-			        </div>
-				</section>
-				
-
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">A bookish</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
-</div>
+  <nav class="navbar">
+    <div class="left">
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
     </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide"></h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author"></h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/allegory1024/">Home</a></li>
-		        
-					<li><a href="/allegory1024/archives">Archives</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="mail" target="_blank" href="/allegory1024/dgyy_86549@qq.com" title="mail">mail</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
+    <div class="center"> </div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline active"> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
 </nav>
-      <div class="body-wrap">
+  <main id="main">
   
-    <article id="post-是数论啊" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/allegory1024/2023/11/30/%E6%98%AF%E6%95%B0%E8%AE%BA%E5%95%8A/" class="article-date">
-  	<time datetime="2023-11-30T15:38:15.907Z" itemprop="datePublished">2023-11-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+    <div class="preview">
+  <!-- <nav class="navbar j-navbar-menu">
+    <i class="iconfont iconmenu"></i>
+  </nav> -->
+  <div class="preview-image">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="是数论啊"><a href="#是数论啊" class="headerlink" title="是数论啊"></a>是数论啊</h1><h2 id="乱入的二分开方"><a href="#乱入的二分开方" class="headerlink" title="乱入的二分开方"></a>乱入的二分开方</h2><h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def sqrt_binary(n):</span><br><span class="line">    low = 0</span><br><span class="line">    up = n</span><br><span class="line">    a = 1</span><br><span class="line">    while True:</span><br><span class="line">        mid = (low + up) // 2</span><br><span class="line">        if ABS(mid*mid - n) &lt; a:</span><br><span class="line">            return mid</span><br><span class="line">        else:</span><br><span class="line">            if mid * mid &gt; n:</span><br><span class="line">                up = mid</span><br><span class="line">            if mid * mid &lt; n:</span><br><span class="line">                low = mid</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h2><h3 id="算法-1"><a href="#算法-1" class="headerlink" title="算法"></a>算法</h3><h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def gcd(a,b):</span><br><span class="line">    while b:</span><br><span class="line">        a,b = b,a%b</span><br><span class="line">    return a</span><br><span class="line">或者</span><br><span class="line">def gcd(a,b):</span><br><span class="line">    if b:</span><br><span class="line">        a,b = gcd(b,a%b)</span><br><span class="line">    return a,b</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="拓展欧几里得算法"><a href="#拓展欧几里得算法" class="headerlink" title="拓展欧几里得算法"></a>拓展欧几里得算法</h2><h3 id="算法-2"><a href="#算法-2" class="headerlink" title="算法"></a>算法</h3><h3 id="证明-1"><a href="#证明-1" class="headerlink" title="证明"></a>证明</h3><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def exgcd(a, b):     </span><br><span class="line">    if b == 0:         </span><br><span class="line">        return 1 , 0</span><br><span class="line">    else:         </span><br><span class="line">        x, y = exgcd(b, a % b)        </span><br><span class="line">        x, y = y, (x - (a // b) * y)         </span><br><span class="line">        return x , y</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h2><h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><p>$$<br>\begin{aligned}<br>&amp;…………………………………………………………………………….\<br>&amp;若m_1,\ m_2, \ … , \ m_n \in Z\ ,\forall\ 0&lt;i&lt;j&lt;n+1 ,(m_i,m_j)&#x3D;1 \</p>
-<p>&amp;则对\forall a_1,\ a_2,\ … ,\ a_n \in Z \</p>
-<p>&amp;一元线性同余方程组\<br>&amp;x \equiv a_1 (mod\ m_1)\<br>&amp;x \equiv a_2 (mod\ m_n)\<br>&amp;…\<br>&amp;x \equiv a_n (mod\ m_n)\</p>
-<p>&amp;有模M&#x3D;m_1 \cdot m_2 \cdot\ … \ m_n &#x3D; \prod_{i&#x3D;1}^{n}m_i 的唯一解，构造如下\</p>
-<p>&amp;记M_i &#x3D; \frac{M}{m_i}\<br>&amp;t_i M_i \equiv 1 (mod \ M)\<br>&amp;解为 \ x&#x3D;a_1 t_1 M_1 + a_2 t_2 M_2 + … +a_n t_n M_n &#x3D; \sum_{i&#x3D;1}^{n}a_i t_i M_i\<br>&amp;…………………………………………………………………………….\<br>\end{aligned}<br>$$</p>
-<h3 id="证明-2"><a href="#证明-2" class="headerlink" title="证明"></a>证明</h3><h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><h2 id="拓展中国剩余定理"><a href="#拓展中国剩余定理" class="headerlink" title="拓展中国剩余定理"></a>拓展中国剩余定理</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>$$<br>\begin{aligned}<br>&amp;…………………………………………………………………………….\<br>&amp; 对某两组线性同余方程\<br>&amp; x \equiv a_i (mod \ m_i)\<br>&amp; x \equiv a_j (mod \ m_j)\<br>&amp; 化为一般形式，\<br>&amp; x + y_i m_i &#x3D; a_i \<br>&amp; x + y_j m_j &#x3D; a_j \<br>&amp; 有 \ a_i - y_i m_i &#x3D; a_j - y_j m_j &#x3D; x\<br>&amp; a_i - a_j &#x3D; y_i m_i -y_j m_j\<br>&amp; 此处可以看作关于y_i y_j 的不定方程\<br>&amp; 若 (m_i,m_j) \nmid (a_i - a_j)，方程无解\<br>&amp; 不妨认为有解\<br>&amp; 记特解为x_0\<br>&amp; 则通解为x &#x3D; x_0 - k \cdot [m_i,m_j]\<br>&amp; 即此方程组等价于 x \equiv x_0 (mod \ [m_i,m_j]),则可以此替代原方程组\<br>&amp; 重复以上操作，直至只剩下最后一个方程<br>\end{aligned}<br>$$</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="二次剩余"><a href="#二次剩余" class="headerlink" title="二次剩余"></a>二次剩余</h2><h3 id="原根"><a href="#原根" class="headerlink" title="原根"></a>原根</h3><h4 id="阶的定义"><a href="#阶的定义" class="headerlink" title="阶的定义"></a>阶的定义</h4><p>$$<br>\begin{aligned}<br>&amp;…………………………………………………………………………….\<br>&amp; 对于整数a,p,(a,p)&#x3D;1\<br>&amp; 若x为使 a^x \equiv 1(mod \ p)成立的最小正整数\<br>&amp; 则称x为a模p的阶，记为e_p(a)\<br>&amp; (有些书上记为ord_pa)<br>\end{aligned}<br>$$</p>
-<h4 id="原根的定义"><a href="#原根的定义" class="headerlink" title="原根的定义"></a>原根的定义</h4><p>$$<br>&amp; 若e_p(a)&#x3D;p-1,\<br>&amp; 则称a为模p的原根<br>$$</p>
-<h4 id="原根定理"><a href="#原根定理" class="headerlink" title="原根定理"></a>原根定理</h4><p>$$<br>\forall 素数p , 恰好有\phi(p-1)个模p的原根\<br>$$</p>
-<p>证明：<br>$$<br>记\psi(d)&#x3D;\lvert{a|1\leq a&lt;p , e_p(a)&#x3D;d }\rvert,\<br>特别地，\psi(p-1)为模p的原根个数\<br>$$<br>引理1：<br>$$<br>对\forall n|p-1,\<br>\psi(d_1) + \psi(s_2) + … + \psi(d_k) &#x3D; n<br>$$<br>引理1的证明：<br>$$<br>\begin{aligned}<br>&amp;…………………………………………………………………………….\<br>&amp; 设p&#x3D;nk\<br>&amp; X^{p-1}-1&#x3D;X^{nk}-1\<br>&amp; \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ &#x3D;(X^n)^k-1\<br>&amp; \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ &#x3D;(X^n-1)((X^n)^{k-1}+(X^n)^{k-2}+…+X^n+1)\<br>&amp; 其中1 \leq X \leq p-1\<br>&amp; 一方面,\<br>&amp; 由费马小定理知，X^{p-1} \equiv 1 (mod \ p)恰好有X&#x3D;1,2,…,p-1这p-1个解，\<br>&amp; 而(X^n)^{k-1}+(X^n)^{k-2}+…+X^n+1 \equiv 0 (mod \ p)至多nk-n个解\<br>&amp; X^n-1 \equiv 0(mod \ p)至多n个解\<br>&amp; 故显然X^n \equiv 1 恰好 n 个解\<br>&amp; 另一方面,\<br>&amp; 若X&#x3D;a是X^n \equiv 1(mod \ p)的解,\<br>&amp; 则e_p(a)|n,\<br>&amp; 设n 的所有因子为 d_1,d_2,…,d_k\<br>&amp; 则X^n \equiv 1 的解的个数等于\<br>&amp; \psi(d_1) + \psi(d_2) + … + \psi(d_k)\<br>&amp; 故 \psi(d_1) + \psi(s_2) + … + \psi(d_k) &#x3D; n\<br>&amp;…………………………………………………………………………….\<br>\end{aligned}<br>$$</p>
-<p>引理2：<br>$$<br>对于素数q|p-1,有\psi(q)&#x3D;\phi(q)<br>$$<br>引理的证明：<br>$$<br>\begin{aligned}<br>&amp;…………………………………………………………………………….\<br>&amp;由引理1，\<br>&amp;\phi(q) + \phi(1) &#x3D; q &#x3D; \psi(q) + \psi(1)\<br>&amp;而\phi(1) &#x3D; \psi(1)\<br>&amp;故\phi(q) &#x3D; \psi(q)\<br>&amp;…………………………………………………………………………….\<br>&amp;\end{aligned}<br>$$</p>
-<p>引理3：<br>$$<br>对素数q_1,q_2|p-1,\phi(q_1q_2) &#x3D; \psi(q_1q_2)<br>$$<br>引理3的证明：<br>$$<br>\begin{aligned}<br>&amp;—————————————–\<br>&amp; 由引理1，\<br>&amp; \phi(q_1q_2) + \phi(q_1) + \phi(q_2) + \phi(1) &#x3D; \psi(q_1q_2) + \psi(q_1) + \psi(q_2) + 1\<br>&amp; 由引理2，\<br>&amp; \phi(q_1) &#x3D; \psi(q_1) \ , \ \phi(q_2) &#x3D; \psi(q_2)\<br>&amp; 故 \phi(a_1q_2) &#x3D; \psi(q_1q_2)\<br>&amp;—————————————–\<br>\end{aligned}<br>$$</p>
-<p>回到原定理的证明，</p>
-<p>由引理3，设n的所有因子为$d_1,d_2,…,d_k$</p>
-<p>$ \phi(d1) + \phi(d_2) + … + \phi(d_k) &#x3D; n &#x3D; \psi(d_1) + \psi(d_2) + … + \psi(d_k) $</p>
-<p>易知$ \phi(n) &#x3D; \psi(n) $,</p>
-<p>取$ n &#x3D; p-1 $,有$ \phi(p-1) &#x3D; \psi(p-1) $</p>
-<h4 id="阿廷猜想"><a href="#阿廷猜想" class="headerlink" title="阿廷猜想"></a>阿廷猜想</h4><p>$ \exists 无穷多个素数p,\ \ st. e_p(2)&#x3D;p-1 $</p>
-<h4 id="广义阿廷猜想"><a href="#广义阿廷猜想" class="headerlink" title="广义阿廷猜想"></a>广义阿廷猜想</h4><p>$$<br>a \in Z \ , a不是平方数, a \not&#x3D; -1 ,\<br>则\exists无穷多个素数p, \ \ st.e_p(a) &#x3D; p-1<br>$$</p>
-<h3 id="指标"><a href="#指标" class="headerlink" title="指标"></a>指标</h3><h4 id="指标的定义"><a href="#指标的定义" class="headerlink" title="指标的定义"></a>指标的定义</h4><p>$$<br>\begin{aligned}<br>&amp; —————————————–\<br>&amp; 素数p, g为一个模p的原根,\<br>&amp; 对1 \leq a \leq p-1\<br>&amp; 若g^x \equiv a (mod \ a),\<br>&amp; 则称x为以g为底a模p的指标\<br>&amp; 记为I(a)\<br>&amp; —————————————–<br>\end{aligned}<br>$$</p>
-<h4 id="指标法则"><a href="#指标法则" class="headerlink" title="指标法则"></a>指标法则</h4><p>$$<br>I(ab) &#x3D; I(a) + I(b) (mod \ p-1)\<br>I(a^k) &#x3D; kI(a) (mod \ p-1)<br>$$</p>
-<p><em>指标亦称离散对数！！！</em></p>
-<h4 id="sagemath"><a href="#sagemath" class="headerlink" title="sagemath"></a>sagemath</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#求x</span><br><span class="line">x = discrete(a, mod(g, n))</span><br></pre></td></tr></table></figure>
-
-<h4 id="BSGS算法"><a href="#BSGS算法" class="headerlink" title="BSGS算法"></a>BSGS算法</h4><h3 id="模p平方剩余"><a href="#模p平方剩余" class="headerlink" title="模p平方剩余"></a>模p平方剩余</h3><h4 id="二次剩余的定义"><a href="#二次剩余的定义" class="headerlink" title="二次剩余的定义"></a>二次剩余的定义</h4><p>$$<br>\begin{aligned}<br>&amp;对1\leq a \leq p-1, \<br>&amp;\ 若\exists b \in N, \ st. a \equiv b^2 (mod \ p),则称a为模p的二次剩余，记为QR；\<br>&amp;否则，称a为模p的二次非剩余，记为NR<br>\end{aligned}<br>$$</p>
-<h4 id="勒让德符号"><a href="#勒让德符号" class="headerlink" title="勒让德符号"></a>勒让德符号</h4><p>$$<br>\bigg( \frac{a}{p} \bigg)&#x3D;<br>\begin{cases}<br>1 &amp; a是模p的二次剩余\<br>-1 &amp; a是模p的二次非剩余<br>\end{cases}<br>$$</p>
-<h4 id="奇素数的二次剩余"><a href="#奇素数的二次剩余" class="headerlink" title="奇素数的二次剩余"></a>奇素数的二次剩余</h4><p>$$<br>对奇素数p,恰有\frac{p-1}{2}个模p的二次剩余，\frac{p-1}{2}个模p的二次非剩余<br>$$</p>
-<h4 id="乘法法则"><a href="#乘法法则" class="headerlink" title="乘法法则"></a>乘法法则</h4><p>$$<br>\bigg(\frac{a}{p}\bigg)\bigg(\frac{b}{p}\bigg) &#x3D; \bigg(\frac{ab}{p}\bigg)<br>$$</p>
-<h4 id="欧拉准则"><a href="#欧拉准则" class="headerlink" title="欧拉准则"></a>欧拉准则</h4><p>$$<br>设p为奇素数，则a^{\frac{p-1}{2}} \equiv \big(\frac{a}{p}\big)(mod \ p)<br>$$</p>
-<h4 id="模4"><a href="#模4" class="headerlink" title="模4"></a>模4</h4><h3 id="二次互反律"><a href="#二次互反律" class="headerlink" title="二次互反律"></a>二次互反律</h3><p>$$<br>奇素数p，q, \ p \not&#x3D;q\<br>\bigg( \frac{-1}{p} \bigg)&#x3D;<br>\begin{cases}<br>1 &amp; p \equiv 1 (mod \ 4)\<br>-1 &amp; p \equiv 3 (mod \ 4)<br>\end{cases}\<br>\bigg( \frac{2}{p} \bigg)&#x3D;<br>\begin{cases}<br>1 &amp; p \equiv 1 \ or \ 7 (mod \ 8)\<br>-1 &amp; p \equiv 3 \ or \ 5 (mod \ 8)<br>\end{cases}\<br>\bigg( \frac{q}{p} \bigg)&#x3D;<br>\begin{cases}<br>\bigg( \frac{p}{q} \bigg) &amp; p \equiv 1 (mod \ 4) \ or \ q \equiv 1 (mod \ 4) \<br>-\bigg( \frac{p}{q} \bigg) &amp; p \equiv 3 (mod \ 4) \ and \ q \equiv 3 (mod \ 4)<br>\end{cases}\<br>$$</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
+        
+              <div class="preview-overlay">
+                <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                  <defs>
+                    <path id="gentle-wave"
+                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                  </defs>
+                  <g class="preview-parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(var(--color-background-rgb),0.7"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(var(--color-background-rgb),0.5)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(var(--color-background-rgb),0.3)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--color-background)"></use>
+                  </g>
+                </svg>
+              </div>
+              
   </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/allegory1024/page/2/">2</a><a class="page-number" href="/allegory1024/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/allegory1024/page/11/">11</a><a class="extend next" rel="next" href="/allegory1024/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
+  <div class="preview-motto-wrapper">
+    <h2 class="preview-motto" id="motto">
+      
+    </h2>
+    
+      <span class="preview-cursor">_</span>
+      
+  </div>
+  <div class="preview-scroll">
+    <a href="#container" class="smooth-scroll"><i class="iconfont iconMouse"></i></a>
+  </div>
 </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-      <div class="footer-left">
-        &copy; 2023 呆瓜的小窝
-      </div>
-        <div class="footer-right">
-          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
-        </div>
-    </div>
-  </div>
-</footer>
-    </div>
-    
   
-<link rel="stylesheet" href="/allegory1024/fancybox/jquery.fancybox.css">
+  <div class="container" id="container">
+    <section class="row post">
+  
+    
 
-
-
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: false,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
-</script>
-
-<script src="/allegory1024/js/main.js"></script>
-
-
-
-
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/allegory1024/2023/11/30/%E6%98%AF%E6%95%B0%E8%AE%BA%E5%95%8A/" class="post-image">
+      <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/allegory1024/2023/11/30/%E6%98%AF%E6%95%B0%E8%AE%BA%E5%95%8A/" title="" ></a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">是数论啊乱入的二分开方算法12345678910111213def sqrt_binary(n):    low = 0    up = n    a = 1    while True:   ...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
+        
+      </div>
+    </div>
   </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/allegory1024/2023/11/30/%E6%B7%B1%E5%A4%A7%E4%BF%A1%E5%AE%89Aurora%E7%AC%AC%E4%B8%80%E6%89%B9WriteUp/" class="post-image">
+      <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/allegory1024/2023/11/30/%E6%B7%B1%E5%A4%A7%E4%BF%A1%E5%AE%89Aurora%E7%AC%AC%E4%B8%80%E6%89%B9WriteUp/" title="" ></a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">深大信安Aurora第一批WriteUp$\textcolor{green}{by}$ $\textcolor{aquamarine}{爱哭的呆瓜}$ 
+
+$\textcolor{skyblue...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/allegory1024/2023/11/30/%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/" class="post-image">
+      <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/allegory1024/2023/11/30/%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/" title="" ></a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">函数与极限映射定义非空集合$$ X,Y $$, 若$ \exist\ 法则f ,\ st\ \forall x$
+</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/allegory1024/2023/11/30/%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81/" class="post-image">
+      <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/allegory1024/2023/11/30/%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81/" title="" ></a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">分组密码DES原理3DES（Triple DES）AES</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/allegory1024/2023/11/30/Secure%20Hash%20Algorithm%EF%BC%88SHA%EF%BC%89/" class="post-image">
+      <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/allegory1024/2023/11/30/Secure%20Hash%20Algorithm%EF%BC%88SHA%EF%BC%89/" title="" ></a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">Secure Hash Algorithm（SHA）SHA家族SHA-1 , SHA-224 , SHA256 , SHA384 , SHA-512（后4者又称SHA-2）
+SHA1### 加密方法</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/allegory1024/2023/11/30/RSA%E6%80%BB%E7%BB%93/" class="post-image">
+      <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/allegory1024/2023/11/30/RSA%E6%80%BB%E7%BB%93/" title="" ></a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">RSA总结$\textcolor{skyblue}{by \ 呆瓜}$
+模板题前置知识RSA的原理费马小定理：$$素数p\ ,\ 整数a,\ a\not\equiv 0(mod\ p)则\a^{...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/allegory1024/2023/11/30/OTP%EF%BC%88one%20time%20pad%EF%BC%89/" class="post-image">
+      <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/allegory1024/2023/11/30/OTP%EF%BC%88one%20time%20pad%EF%BC%89/" title="" ></a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">OTP（one time pad）特点
+密钥要和加密的消息同样长
+
+密钥由真正的随机符号组成 (bushi)
+
+密钥只能使用一次，永远不对其它消息重复使用
+
+
+加密明文与密钥经过某种运算后得到密...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/allegory1024/2023/11/30/Message-Digest%20Algorithm%20MD5(MD5)/" class="post-image">
+      <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/allegory1024/2023/11/30/Message-Digest%20Algorithm%20MD5(MD5)/" title="" ></a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">Message-Digest Algorithm MD5(MD5)加密方法补位与拓展将数据按位补充至 bits_length $$\equiv$$ 448 (mod 512)
+补位方法为在信息后...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/allegory1024/2023/11/30/AMM%E7%AE%97%E6%B3%95%EF%BC%88Adleman-Mander-Miller%20Method%EF%BC%89/" class="post-image">
+      <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/allegory1024/2023/11/30/AMM%E7%AE%97%E6%B3%95%EF%BC%88Adleman-Mander-Miller%20Method%EF%BC%89/" title="" ></a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">AMM算法（Adleman-Mander-Miller Method）参考资料[Adleman-Mander-Miller Method.pdf](https://github.com/alle...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+</section>
+    <section class="paginator">
+  
+    <span class="page-number current">1</span><a class="page-number" href="/allegory1024/page/2/">2</a><a class="extend next" rel="next" href="/allegory1024/page/2/">&gt;</a>
+  
+</section>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/allegory1024/js/color-mode.js"></script>
+
+  
+  
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/allegory1024/js/utils.js"></script>
+<script src="/allegory1024/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
 </html>

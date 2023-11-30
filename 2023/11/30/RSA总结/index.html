@@ -1,176 +1,190 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en" color-mode=light>
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> - 呆瓜的小窝</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
   
-  <title>呆瓜的小窝</title>
+  <meta name="description" content="RSA总结$\textcolor{skyblue}{b...">
+  <meta name="author" content="呆瓜的小窝">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
 
-  <!-- keywords -->
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="RSA总结$\textcolor{skyblue}{by \ 呆瓜}$ 模板题前置知识RSA的原理费马小定理：$$素数p\ ,\ 整数a,\ a\not\equiv 0(mod\ p)则\a^{p-1}\equiv1(mod\ p)$$ 证明： 引理：$$素数p\ ,\ 整数a,\ a\not\equiv 0(mod\ p)则\{a_i|0&lt;k&lt;p,0&lt;a_i&lt;p,a_i\">
-<meta property="og:type" content="article">
-<meta property="og:title" content="呆瓜的小窝">
-<meta property="og:url" content="https://github.com/allegory1024/2023/11/30/RSA%E6%80%BB%E7%BB%93/index.html">
-<meta property="og:site_name" content="呆瓜的小窝">
-<meta property="og:description" content="RSA总结$\textcolor{skyblue}{by \ 呆瓜}$ 模板题前置知识RSA的原理费马小定理：$$素数p\ ,\ 整数a,\ a\not\equiv 0(mod\ p)则\a^{p-1}\equiv1(mod\ p)$$ 证明： 引理：$$素数p\ ,\ 整数a,\ a\not\equiv 0(mod\ p)则\{a_i|0&lt;k&lt;p,0&lt;a_i&lt;p,a_i\">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://github.com/allegory1024/picture/blob/main/PicGo/amm2.png?raw=true">
-<meta property="article:published_time" content="2023-11-30T15:38:15.901Z">
-<meta property="article:modified_time" content="2023-11-24T17:03:48.412Z">
-<meta property="article:author" content="呆瓜的小窝">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/allegory1024/picture/blob/main/PicGo/amm2.png?raw=true">
-  
-    <link rel="alternative" href="/atom.xml" title="呆瓜的小窝" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/img/favicon.ico">
-  
   
 <link rel="stylesheet" href="/allegory1024/css/style.css">
 
-  
-  
 
   
-<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
-
-  
-<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-
-
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-  <div id="container">
-    <div id="particles-js"></div>
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-				<img lazy-src="" class="js-avatar">
-			
-		</a>
-
-		<hgroup>
-			<h1 class="header-author"><a href="/">呆瓜的小窝</a></h1>
-		</hgroup>
-
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/allegory1024/">Home</a></li>
-				        
-							<li><a href="/allegory1024/archives">Archives</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="half-header-menu">
-						<a class="hide">Home</a>
-						<a>Tags</a>
-						<a>Links</a>
-						<a>About</a>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="mail" target="_blank" href="/allegory1024/dgyy_86549@qq.com" title="mail">mail</a>
-					        
-						</div>
-						<!-- music -->
-						
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
-			        
-			        </div>
-				</section>
-				
-
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">A bookish</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
-</div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide"></h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author"></h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/allegory1024/">Home</a></li>
-		        
-					<li><a href="/allegory1024/archives">Archives</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="mail" target="_blank" href="/allegory1024/dgyy_86549@qq.com" title="mail">mail</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-      <div class="body-wrap"><article id="post-RSA总结" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/allegory1024/2023/11/30/RSA%E6%80%BB%E7%BB%93/" class="article-date">
-  	<time datetime="2023-11-30T15:38:15.901Z" itemprop="datePublished">2023-11-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
     
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
     
-    <div class="article-entry" itemprop="articleBody">
       
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/allegory1024/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title"></h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 30, 2023</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5868</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
         <h1 id="RSA总结"><a href="#RSA总结" class="headerlink" title="RSA总结"></a>RSA总结</h1><p>$\textcolor{skyblue}{by \ 呆瓜}$</p>
 <h2 id="模板题"><a href="#模板题" class="headerlink" title="模板题"></a>模板题</h2><h3 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h3><h4 id="RSA的原理"><a href="#RSA的原理" class="headerlink" title="RSA的原理"></a>RSA的原理</h4><h5 id="费马小定理："><a href="#费马小定理：" class="headerlink" title="费马小定理："></a>费马小定理：</h5><p>$$<br>素数p\ ,\ 整数a,\ a\not\equiv 0(mod\ p)则\<br>a^{p-1}\equiv1(mod\ p)<br>$$</p>
 <p>证明：</p>
@@ -222,7 +236,7 @@
 
 <h3 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h3><h4 id="Aurora第一批ez-RSA"><a href="#Aurora第一批ez-RSA" class="headerlink" title="Aurora第一批ez_RSA"></a>Aurora第一批ez_RSA</h4><h2 id="e-，-phi-n-不互素"><a href="#e-，-phi-n-不互素" class="headerlink" title="$e ，\phi(n)$ 不互素"></a>$e ，\phi(n)$ 不互素</h2><h3 id="前置知识-2"><a href="#前置知识-2" class="headerlink" title="前置知识"></a>前置知识</h3><p>$$<br>(e,\phi(n))&#x3D;b\<br>ed\equiv1(mod\ \phi(n))\<br>e &#x3D;a*b\<br>abd\equiv1(mod\ n)\<br>m^{ab}\equiv c(mod\ n)\<br>c^{bd}\equiv m^{abbd}\equiv m^b(mod\ n)<br>$$</p>
 <h4 id="AMM算法-Adleman-Mander-Miller-Method"><a href="#AMM算法-Adleman-Mander-Miller-Method" class="headerlink" title="AMM算法(Adleman-Mander-Miller Method)"></a>AMM算法(Adleman-Mander-Miller Method)</h4><p>先试试开个平方</p>
-<p><img src="https://github.com/allegory1024/picture/blob/main/PicGo/amm2.png?raw=true" alt="amm2.png"></p>
+<p><img   class="lazyload" data-original="https://github.com/allegory1024/picture/blob/main/PicGo/amm2.png?raw=true" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="amm2.png"></p>
 <p>开e次方<br>$$<br>\begin{aligned}<br>&amp;———————————-\<br>&amp; 设p-1 &#x3D; e^t \cdot s ,\ (e,s)&#x3D;1\<br>&amp; x^{p-1} \equiv 1 (mod \ p)\<br>&amp; x^{\frac{p-1}{e}} \equiv (x^s)^{e^{t-1}} \equiv 1 (mod \ p)\<br>&amp; 取e次非剩余y\<br>&amp;<br>&amp;———————————-\<br>\end{aligned}<br>$$</p>
 <h3 id="栗子-1"><a href="#栗子-1" class="headerlink" title="栗子"></a>栗子</h3><p>密码小分队的作业</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">from Crypto.Util.number import *</span><br><span class="line"></span><br><span class="line">pbits = 1024</span><br><span class="line">ebits = 128</span><br><span class="line"># 获取公钥私钥</span><br><span class="line">p, q, r = getPrime(pbits), getPrime(pbits), getPrime(pbits)</span><br><span class="line">n = p * q * r</span><br><span class="line">phi = (p - 1) * (q - 1) * (r - 1)</span><br><span class="line"># 如果e和phi公因数不为1，两个不同的素数一定是互质的，则无法找到唯一逆元</span><br><span class="line">e = getPrime(ebits)</span><br><span class="line">d = pow(e, -1, phi)</span><br><span class="line">flag = b&#x27;Aurora&#123;qsdzyyds!!!&#125;&#x27;</span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line">c = pow(m, d, n)</span><br><span class="line"># print(f&#x27;&#123;p = &#125;&#x27;)</span><br><span class="line"># print(f&#x27;&#123;q = &#125;&#x27;)</span><br><span class="line"># print(f&#x27;&#123;r = &#125;&#x27;)</span><br><span class="line"># print(f&#x27;&#123;d = &#125;&#x27;)</span><br><span class="line"># print(f&#x27;&#123;c = &#125;&#x27;)</span><br><span class="line">print(long_to_bytes(pow(c,pow(d, -1, phi),n)))</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">p = 155089215082383417652856262584825266769844756013871145064642937320730176461369677947774705531924142320352641766093453143562687575138818417738819604093981678299529027557569762824528828748472250626411839417820057118716943747683404013206370557881906039159150709858341953260672152732558316331441483274168275526763</span><br><span class="line">q = 99458159859877169574392378452249833796343074299671242013258501391951415572326421921125732543263502498019640404428106003927141825985376810745595606519534271043611911782075965349042977647821232488477974968782597988995148048902654974116209592728965276932843569985976174955101074083969554868848136386600165131399</span><br><span class="line">r = 91651471335922262142615993547035259895259797024298058555829016838710942417583768607279579223908044409598131794717406404663525096096610732076240669046587825828796405228185885554306464905874267359379731836643138481601437402253901432135193895552723924193613958936079182452505527886367093293966408356381210041311</span><br><span class="line">d = 442747012084043017444414893855018573793007661299372367097352382861792889003602588037728446048819227852347893455828101883133569746844701508783893053956719012289315802055706687685268566602913894431266569489633919277840858446396830286325818862414512097339818098582097988809312723217193543811573996727087954016113260795330490313576968882831177308569221641767055133538915346211333222872186027160030751252476351569185442309265927774292590035874810607745405236427975734657453441806659237651837182838166722778499160929718777849220958385266787977425402947577375192915585734121652739018101587357779231658081932365867325954099600878736894914096944082191070889441697102479890187201554680761365082160343103723934238760458984405496635555071883360805786761064163559741197503766279735122871530846116786856021309782369428260249835730750360928321255676555673974197279614465240682986814978863040867333430603922278184967730972325093345114626649</span><br><span class="line">c = 174950850414504768106416370009737478837612719782408699139702945259719132918865623986282406871391754822658312627849153101394650106741466512428305274042442230657560126993498554960871658723798456509112529035489798478717096706824810392887620627166072594171036292041607036870876819845059859389247504696749104531887595606899730673710605613911576279657349022114910542303747378708097267227120657975550730445501508842414205624767004476077426584685157176799924167949548983378108649843293948293752244813986306183608669183543743214078086427602060552332312956921158009130219283635667378181318747574297372072253054237328401708413742670841381811230253410688921051951564003689322740175861896382731212608065561416656719473296246199457252588049621311486643357352094810798248816579979801028113818544090172341567107332996945485085375173472083233916471499352627461296584233551739860555101737013140023475194148420484355802973497741335778064703041</span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
@@ -231,78 +245,174 @@
 
 <h2 id="共模攻击"><a href="#共模攻击" class="headerlink" title="共模攻击"></a>共模攻击</h2><h3 id="前置知识-3"><a href="#前置知识-3" class="headerlink" title="前置知识"></a>前置知识</h3><h4 id="贝祖定理与拓展欧几里得"><a href="#贝祖定理与拓展欧几里得" class="headerlink" title="贝祖定理与拓展欧几里得"></a>贝祖定理与拓展欧几里得</h4><p>$$<br>贝祖定理： \<br>\forall a,b\in N ,\ \ \ \ \exists x,y\in Z , \ \ \ \ st\ ax+by&#x3D;(a,b)\<br>$$</p>
 <h3 id="栗子-2"><a href="#栗子-2" class="headerlink" title="栗子"></a>栗子</h3><h2 id="共模攻击（e1-e2不互素）"><a href="#共模攻击（e1-e2不互素）" class="headerlink" title="共模攻击（e1,e2不互素）"></a>共模攻击（e1,e2不互素）</h2><h2 id="共享素数"><a href="#共享素数" class="headerlink" title="共享素数"></a>共享素数</h2>
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>呆瓜的小窝</li>
+    <li><strong>本文链接：</strong><a href="https://github.com/allegory1024/2023/11/30/RSA%E6%80%BB%E7%BB%93/index.html" title="https:&#x2F;&#x2F;github.com&#x2F;allegory1024&#x2F;2023&#x2F;11&#x2F;30&#x2F;RSA%E6%80%BB%E7%BB%93&#x2F;index.html">https:&#x2F;&#x2F;github.com&#x2F;allegory1024&#x2F;2023&#x2F;11&#x2F;30&#x2F;RSA%E6%80%BB%E7%BB%93&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/allegory1024/2023/11/30/Secure%20Hash%20Algorithm%EF%BC%88SHA%EF%BC%89/"><i class="iconfont iconleft"></i></a>
+    <a href="/allegory1024/2023/11/30/OTP%EF%BC%88one%20time%20pad%EF%BC%89/"><i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
       
-    </div>
-    
+    </section>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/allegory1024/2023/11/30/Secure%20Hash%20Algorithm%EF%BC%88SHA%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">&lt;</strong>
-      <div class="article-nav-title">
+</article></div>
+      <div class="col-xl-3">
         
-          (no title)
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RSA%E6%80%BB%E7%BB%93"><span class="toc-text">RSA总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E9%A2%98"><span class="toc-text">模板题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="toc-text">前置知识</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E4%BD%8D%E6%94%BB%E5%87%BB"><span class="toc-text">高位攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86-1"><span class="toc-text">前置知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%97%E5%AD%90"><span class="toc-text">栗子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#e-%EF%BC%8C-phi-n-%E4%B8%8D%E4%BA%92%E7%B4%A0"><span class="toc-text">$e ，\phi(n)$ 不互素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86-2"><span class="toc-text">前置知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%97%E5%AD%90-1"><span class="toc-text">栗子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB"><span class="toc-text">共模攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86-3"><span class="toc-text">前置知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%97%E5%AD%90-2"><span class="toc-text">栗子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB%EF%BC%88e1-e2%E4%B8%8D%E4%BA%92%E7%B4%A0%EF%BC%89"><span class="toc-text">共模攻击（e1,e2不互素）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E7%B4%A0%E6%95%B0"><span class="toc-text">共享素数</span></a></li></ol></li></ol>
+  </aside>
+
         
       </div>
-    </a>
-  
-  
-    <a href="/allegory1024/2023/11/30/OTP%EF%BC%88one%20time%20pad%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <strong class="article-nav-caption">&gt;</strong>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-
-
-
-
-</div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-      <div class="footer-left">
-        &copy; 2023 呆瓜的小窝
-      </div>
-        <div class="footer-right">
-          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
-        </div>
     </div>
   </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
 </footer>
-    </div>
-    
   
-<link rel="stylesheet" href="/allegory1024/fancybox/jquery.fancybox.css">
-
-
-
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: false,
-		animate: true,
-		isHome: false,
-		isPost: true,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
-</script>
-
-<script src="/allegory1024/js/main.js"></script>
-
-
-
-
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
   </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/allegory1024/js/color-mode.js"></script>
+
+  
+  
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/allegory1024/js/utils.js"></script>
+<script src="/allegory1024/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
