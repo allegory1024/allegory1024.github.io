@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>杂七杂八的经典密码 | 呆瓜的小窝</title><meta name="author" content="allegory"><meta name="copyright" content="allegory"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="杂七杂八的经典密码  凯撒密码(Caesar cipher)  原理 明文字符向左或向右移动一个固定数目的位置得到密文，即 En(x)&#x3D;(x+n)mod 26En(x) &#x3D; (x + n) mod \ 26 En(x)&#x3D;(x+n)mod 26 栗子：  脚本： 1234567891011121314151617def caesar_encrypt(plaintext, shift):    en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="杂七杂八的经典密码">
+<meta property="og:url" content="http://example.com/2024/03/03/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%BB%8F%E5%85%B8%E5%AF%86%E7%A0%81/index.html">
+<meta property="og:site_name" content="呆瓜的小窝">
+<meta property="og:description" content="杂七杂八的经典密码  凯撒密码(Caesar cipher)  原理 明文字符向左或向右移动一个固定数目的位置得到密文，即 En(x)&#x3D;(x+n)mod 26En(x) &#x3D; (x + n) mod \ 26 En(x)&#x3D;(x+n)mod 26 栗子：  脚本： 1234567891011121314151617def caesar_encrypt(plaintext, shift):    en">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-03-03T15:59:59.000Z">
+<meta property="article:modified_time" content="2024-03-03T08:52:05.773Z">
+<meta property="article:author" content="allegory">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/03/03/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%BB%8F%E5%85%B8%E5%AF%86%E7%A0%81/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '杂七杂八的经典密码',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-03 16:52:05'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="呆瓜的小窝"><span class="site-name">呆瓜的小窝</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">杂七杂八的经典密码</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-03-03T15:59:59.000Z" title="Created 2024-03-03 23:59:59">2024-03-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-03-03T08:52:05.773Z" title="Updated 2024-03-03 16:52:05">2024-03-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="杂七杂八的经典密码"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="杂七杂八的经典密码"><a class="markdownIt-Anchor" href="#杂七杂八的经典密码"></a> 杂七杂八的经典密码</h1>
+<h2 id="凯撒密码caesar-cipher"><a class="markdownIt-Anchor" href="#凯撒密码caesar-cipher"></a> 凯撒密码(Caesar cipher)</h2>
+<h3 id="原理"><a class="markdownIt-Anchor" href="#原理"></a> 原理</h3>
+<p>明文字符向左或向右移动一个固定数目的位置得到密文，即</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>E</mi><mi>n</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>n</mi><mo stretchy="false">)</mo><mi>m</mi><mi>o</mi><mi>d</mi><mtext> </mtext><mn>26</mn></mrow><annotation encoding="application/x-tex">En(x) = (x + n) mod \ 26
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal">d</span><span class="mspace"> </span><span class="mord">2</span><span class="mord">6</span></span></span></span></span></p>
+<p>栗子：</p>
+<img src="C:\Users\alleg\AppData\Roaming\Typora\typora-user-images\image-20240303000542929.png" alt="image-20240303000542929" style="zoom:40%;" />
+<p>脚本：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">caesar_encrypt</span>(<span class="params">plaintext, shift</span>):</span><br><span class="line">    encrypted_text = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> char <span class="keyword">in</span> plaintext:</span><br><span class="line">        <span class="keyword">if</span> char.isalpha():</span><br><span class="line">            <span class="comment"># 判断字符是大写还是小写</span></span><br><span class="line">            is_upper = char.isupper()</span><br><span class="line">            <span class="comment"># 将字符转换成对应的ASCII码</span></span><br><span class="line">            char_code = <span class="built_in">ord</span>(char.lower())</span><br><span class="line">            <span class="comment"># 加上偏移量并取模，保证在字母范围内</span></span><br><span class="line">            encrypted_char_code = (char_code - <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>) + shift) % <span class="number">26</span> + <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">            <span class="comment"># 如果原字符是大写，则转换回大写</span></span><br><span class="line">            encrypted_char = <span class="built_in">chr</span>(encrypted_char_code).upper() <span class="keyword">if</span> is_upper <span class="keyword">else</span> <span class="built_in">chr</span>(encrypted_char_code)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment"># 如果不是字母，则保持不变</span></span><br><span class="line">            encrypted_char = char</span><br><span class="line">        encrypted_text += encrypted_char</span><br><span class="line">    <span class="keyword">return</span> encrypted_text</span><br></pre></td></tr></table></figure>
+<h3 id="解密"><a class="markdownIt-Anchor" href="#解密"></a> 解密</h3>
+<p>枚举n</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>D</mi><mi>n</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>n</mi><mo stretchy="false">)</mo><mi>m</mi><mi>o</mi><mi>d</mi><mtext> </mtext><mn>26</mn></mrow><annotation encoding="application/x-tex">Dn(x) = (x - n) mod \ 26
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal">d</span><span class="mspace"> </span><span class="mord">2</span><span class="mord">6</span></span></span></span></span></p>
+<p>脚本：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">caesar_decrypt</span>(<span class="params">ciphertext</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">26</span>):</span><br><span class="line">        decrypted_text = caesar_encrypt(ciphertext, i)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;flag&#x27;</span> <span class="keyword">in</span> decrypted_text:</span><br><span class="line">            <span class="keyword">return</span> decrypted_text</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;NONE&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="维吉尼亚密码"><a class="markdownIt-Anchor" href="#维吉尼亚密码"></a> 维吉尼亚密码</h2>
+<h3 id="原理-2"><a class="markdownIt-Anchor" href="#原理-2"></a> 原理</h3>
+<p>一种多表替代密码，通过使用不同的凯撒密码对明文的每个字母进行加密</p>
+<img src="C:\Users\alleg\AppData\Roaming\Typora\typora-user-images\image-20240303001020820.png" alt="image-20240303001020820" style="zoom:70%;" />
+<p>加密解密脚本：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">vigenere_encrypt</span>(<span class="params">plaintext, key</span>):</span><br><span class="line">    encrypted_text = <span class="string">&quot;&quot;</span></span><br><span class="line">    key_length = <span class="built_in">len</span>(key)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(plaintext)):</span><br><span class="line">        char = plaintext[i]</span><br><span class="line">        <span class="keyword">if</span> char.isalpha():</span><br><span class="line">            <span class="comment"># 判断字符是大写还是小写</span></span><br><span class="line">            is_upper = char.isupper()</span><br><span class="line">            <span class="comment"># 将字符转换成对应的ASCII码</span></span><br><span class="line">            char_code = <span class="built_in">ord</span>(char.lower())</span><br><span class="line">            <span class="comment"># 使用关键字中对应位置的字母作为偏移量</span></span><br><span class="line">            key_char_code = <span class="built_in">ord</span>(key[i % key_length].lower())</span><br><span class="line">            <span class="comment"># 加上偏移量并取模，保证在字母范围内</span></span><br><span class="line">            encrypted_char_code = (char_code - <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>) + key_char_code - <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>)) % <span class="number">26</span> + <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">            <span class="comment"># 如果原字符是大写，则转换回大写</span></span><br><span class="line">            encrypted_char = <span class="built_in">chr</span>(encrypted_char_code).upper() <span class="keyword">if</span> is_upper <span class="keyword">else</span> <span class="built_in">chr</span>(encrypted_char_code)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment"># 如果不是字母，则保持不变</span></span><br><span class="line">            encrypted_char = char</span><br><span class="line">        encrypted_text += encrypted_char</span><br><span class="line">    <span class="keyword">return</span> encrypted_text</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">vigenere_decrypt</span>(<span class="params">ciphertext, key</span>):</span><br><span class="line">    <span class="comment"># 解密实际上就是加密的逆过程，只需将偏移量取反即可</span></span><br><span class="line">    <span class="keyword">return</span> vigenere_encrypt(ciphertext, key)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="栅栏密码"><a class="markdownIt-Anchor" href="#栅栏密码"></a> 栅栏密码</h2>
+<p>密文由左至右分为若干行，由上至下读取为密文</p>
+<p>栗子：</p>
+<p>ciphertext: idaisagreatdecompilationsoftwarebutyoumaynotknowthatthelasttwolettersofeachletterinidaarekfcandvmefifty(IDA is a great decompilation software, but you may not know that the last two letters of each letter in IDA are KFC, and V is 50,)</p>
+<img src="C:\Users\alleg\AppData\Roaming\Typora\typora-user-images\image-20240303005148721.png" alt="image-20240303005148721" style="zoom:67%;" />
+<p>脚本：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">rail_fence_encrypt</span>(<span class="params">plaintext, rails</span>):</span><br><span class="line">    </span><br><span class="line">    encrypted_text = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(rails):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(<span class="built_in">len</span>(plaintext) / rails + <span class="number">0.5</span>)):</span><br><span class="line">            <span class="comment">#print(j)</span></span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                encrypted_text += plaintext[j * rails + i]</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> encrypted_text</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">rail_fence_decrypt</span>(<span class="params">ciphertext</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ciphertext)):</span><br><span class="line">        decrypted_text = rail_fence_encrypt(ciphertext, i)</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">&#x27;flag&#x27;</span> <span class="keyword">in</span> decrypted_text):</span><br><span class="line">            <span class="keyword">return</span> decrypted_text</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;NONE&#x27;</span></span><br><span class="line"></span><br><span class="line">plaintext = <span class="string">&quot;flag&#123;idaisagreatdecompilationsoftwarebutyoumaynotknowthatthelasttwolettersofeachletterinidaarekfcandvmefifty&#125;&quot;</span></span><br><span class="line">rails = <span class="number">18</span></span><br><span class="line"></span><br><span class="line">encrypted_text = rail_fence_encrypt(plaintext, rails)</span><br><span class="line">decrypted_text = rail_fence_decrypt(encrypted_text)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;原文: &quot;</span>, plaintext)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;栅栏数: <span class="subst">&#123;rails&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;加密后: &quot;</span>, encrypted_text)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;解密后: &quot;</span>, decrypted_text)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="base家族"><a class="markdownIt-Anchor" href="#base家族"></a> base家族</h2>
+<h3 id="base64"><a class="markdownIt-Anchor" href="#base64"></a> base64</h3>
+<p>特征：</p>
+<p>=结尾（不一定），包含包括大写字母 A-Z、小写字母 a-z、数字 0-9 及 + /，长为4的倍数</p>
+<p>脚本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import base</span><br><span class="line">ciphertext = base64.b64encode(plaintext)</span><br><span class="line">plaintext = base64.b64decode(ciphertext)</span><br></pre></td></tr></table></figure>
+<h3 id="base32"><a class="markdownIt-Anchor" href="#base32"></a> base32</h3>
+<p>特征：</p>
+<p>只含大写字母 A-Z 和数字 2-7</p>
+<p>脚本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import base</span><br><span class="line">ciphertext = base64.b32encode(plaintext)</span><br><span class="line">plaintext = base64.b32decode(ciphertext)</span><br></pre></td></tr></table></figure>
+<h3 id="base16"><a class="markdownIt-Anchor" href="#base16"></a> base16</h3>
+<p>脚本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import base</span><br><span class="line">ciphertext = base64.b16encode(plaintext)</span><br><span class="line">plaintext = base64.b16decode(ciphertext)</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">allegory</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2024/03/03/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%BB%8F%E5%85%B8%E5%AF%86%E7%A0%81/">http://example.com/2024/03/03/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%BB%8F%E5%85%B8%E5%AF%86%E7%A0%81/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/03/03/%E5%AF%8C%E5%85%B0%E5%85%8B%E6%9E%97%E6%94%BB%E5%87%BB(Franklin-Reiter%20Attact)/" title="富兰克林攻击"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">富兰克林攻击</div></div></a></div><div class="next-post pull-right"><a href="/2024/03/03/RSA%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">allegory</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%BB%8F%E5%85%B8%E5%AF%86%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text"> 杂七杂八的经典密码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81caesar-cipher"><span class="toc-number">1.1.</span> <span class="toc-text"> 凯撒密码(Caesar cipher)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%AF%86"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 解密</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81"><span class="toc-number">1.2.</span> <span class="toc-text"> 维吉尼亚密码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86-2"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%85%E6%A0%8F%E5%AF%86%E7%A0%81"><span class="toc-number">1.3.</span> <span class="toc-text"> 栅栏密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#base%E5%AE%B6%E6%97%8F"><span class="toc-number">1.4.</span> <span class="toc-text"> base家族</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#base64"><span class="toc-number">1.4.1.</span> <span class="toc-text"> base64</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#base32"><span class="toc-number">1.4.2.</span> <span class="toc-text"> base32</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#base16"><span class="toc-number">1.4.3.</span> <span class="toc-text"> base16</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/28/Aurora2024-1/" title="Aurora2024.1">Aurora2024.1</a><time datetime="2024-03-28T11:25:00.000Z" title="Created 2024-03-28 19:25:00">2024-03-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/03/DLP%20(%20%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0%E9%97%AE%E9%A2%98,%20Discrete%20Logarithm%20Problem%20)/" title="离散对数问题">离散对数问题</a><time datetime="2024-03-03T15:59:59.000Z" title="Created 2024-03-03 23:59:59">2024-03-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/03/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/" title="中国剩余定理">中国剩余定理</a><time datetime="2024-03-03T15:59:59.000Z" title="Created 2024-03-03 23:59:59">2024-03-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/03/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/" title="二次剩余">二次剩余</a><time datetime="2024-03-03T15:59:59.000Z" title="Created 2024-03-03 23:59:59">2024-03-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/03/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/" title="共模攻击">共模攻击</a><time datetime="2024-03-03T15:59:59.000Z" title="Created 2024-03-03 23:59:59">2024-03-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By allegory</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
